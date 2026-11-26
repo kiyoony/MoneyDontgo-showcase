@@ -1,0 +1,18 @@
+import{c as A,a as V}from"./book-scenarios-C5IhzNz1.js";import{j as e,s as n,p}from"./theme-Bmk8G3Xq.js";import"./cashflow-sankey-AgyaLfEk.js";import{S as w,C as y,d as f,e as C,A as i,f as v,u as d,V as m,M as H,g as k,s as P}from"./components-ToVeWDsC.js";import"./iframe-wYiu5u-S.js";import{F as T}from"./feedback-CLHngn3J.js";import{b as W}from"./calendar-DHZANot5.js";import"./preload-helper-DhRmtqSx.js";function E({model:o,feedback:c,onRegister:l,onRevalue:s,cardSummaries:r}){return e.jsxs(w,{children:[e.jsx(T,{value:c}),e.jsxs(y,{style:a.totalCard,children:[e.jsx(f,{title:"비현금 자산 평가액",action:l?e.jsx(C,{label:"자산 등록",variant:"quiet",onPress:l}):void 0}),e.jsx(i,{style:a.totalValue,children:v(o.total)}),e.jsx(i,{style:d.helper,children:"마지막 수동 평가 기준"})]}),r,e.jsxs(m,{style:a.section,children:[e.jsx(f,{title:"보유 자산"}),e.jsxs(y,{style:a.listCard,children:[o.assets.map((t,h)=>e.jsxs(H,{accessibilityRole:s?"button":void 0,accessibilityLabel:s?`평가 갱신 ${t.name} · ${v(t.value)}`:void 0,accessibilityHint:s?"평가 갱신 양식을 엽니다.":void 0,onPress:s?()=>s(t.id):void 0,style:[a.asset,h>0&&a.divider],children:[e.jsxs(m,{style:a.assetText,children:[e.jsx(i,{style:d.value,children:t.name}),e.jsx(i,{style:d.label,children:t.detail})]}),e.jsxs(m,{style:a.assetValue,children:[e.jsx(i,{style:a.value,children:v(t.value)}),e.jsx(k,{value:t.change,unit:"%",context:"이전 평가 대비",style:a.change})]}),s?e.jsx(i,{"aria-hidden":!0,style:d.label,children:"›"}):null]},t.id)),o.assets.length===0?e.jsx(m,{style:a.empty,children:e.jsx(i,{style:d.value,children:"등록된 자산이 없습니다."})}):null]})]})]})}const a=P.create({totalCard:{backgroundColor:"transparent",gap:n.sm},totalValue:{color:p.ink,fontSize:28,fontWeight:"700"},section:{gap:n.md},listCard:{paddingVertical:0},asset:{flexDirection:"row",flexWrap:"wrap",gap:n.sm,minHeight:48,alignItems:"center",paddingVertical:n.sm},divider:{borderTopWidth:1,borderTopColor:p.border},assetText:{flexGrow:1,flexBasis:140,minWidth:0,gap:4},assetValue:{gap:n.sm,flexShrink:1,minWidth:0,alignItems:"flex-end"},value:{color:p.ink,fontSize:16,fontWeight:"600"},change:{color:p.muted,fontSize:13,textAlign:"right"},empty:{gap:n.xs,paddingVertical:n.lg}});function F(o,c){return c.filter(l=>l.holdingId===o).sort((l,s)=>s.valuedAt.localeCompare(l.valuedAt))}function S(o,c){const l=o.flatMap(s=>{const[r,t]=F(s.id,c);if(!r)return[];const h=t&&t.value!==0?(r.value-t.value)/t.value*100:null;return[{id:s.id,name:s.name,detail:`${W(r.valuedAt).replaceAll("-",".")} 수동 평가`,value:r.value,change:h}]});return{assets:l,total:l.reduce((s,r)=>s+r.value,0)}}const j=A(),b=V(),G={title:"Screens/Assets",component:E,args:{model:S(j.assetHoldings,j.valuations)},argTypes:{model:{control:"object"}}},u={},g={args:{model:S(b.assetHoldings,b.valuations)}},x={args:{model:{total:9e5,assets:[{id:"asset-down",name:"국내 주식",detail:"2026.09.11 수동 평가",value:9e5,change:-10}]}}};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:"{}",...u.parameters?.docs?.source}}};g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  args: {
+    model: createAssetsViewModel(empty.assetHoldings, empty.valuations)
+  }
+}`,...g.parameters?.docs?.source}}};x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`{
+  args: {
+    model: {
+      total: 900_000,
+      assets: [{
+        id: 'asset-down',
+        name: '국내 주식',
+        detail: '2026.09.11 수동 평가',
+        value: 900_000,
+        change: -10
+      }]
+    }
+  }
+}`,...x.parameters?.docs?.source}}};const K=["Populated","Empty","Falling"];export{g as Empty,x as Falling,u as Populated,K as __namedExportsOrder,G as default};
