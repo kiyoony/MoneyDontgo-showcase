@@ -1,0 +1,16 @@
+import{B as r}from"./navigation-actions-Brep544C.js";import"./theme-Bmk8G3Xq.js";import"./app-symbol.web-BQYCspdR.js";import"./cashflow-sankey-DMHpqij8.js";import"./components-CrgZFfWO.js";import"./iframe-DcUV9DEb.js";import"./preload-helper-DhRmtqSx.js";import"./ledger-ui-C3eDBkp5.js";const{expect:s,fn:c}=__STORYBOOK_MODULE_TEST__,B={title:"Components/Navigation/BookMenuAction",component:r,args:{name:"내 장부",expanded:!1,onPress:c()},argTypes:{name:{control:"text"},expanded:{control:"boolean"},onPress:{control:!1}}},e={play:async({args:n,canvas:o,userEvent:t})=>{await t.click(o.getByRole("button",{name:n.name+" 장부 메뉴 열기"})),await s(n.onPress).toHaveBeenCalledOnce()}},a={args:{expanded:!0}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  play: async ({
+    args,
+    canvas,
+    userEvent
+  }) => {
+    await userEvent.click(canvas.getByRole('button', {
+      name: args.name + ' 장부 메뉴 열기'
+    }));
+    await expect(args.onPress).toHaveBeenCalledOnce();
+  }
+}`,...e.parameters?.docs?.source}}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  args: {
+    expanded: true
+  }
+}`,...a.parameters?.docs?.source}}};const _=["Default","Expanded"];export{e as Default,a as Expanded,_ as __namedExportsOrder,B as default};
