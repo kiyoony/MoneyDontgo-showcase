@@ -1,0 +1,12 @@
+import{R as o}from"./navigation-actions-BhJUi6UU.js";import"./theme-Bmk8G3Xq.js";import"./app-symbol.web-BQYCspdR.js";import"./cashflow-sankey-fBZKRwXB.js";import"./components-Bi0Z_tY2.js";import"./iframe-BoxIrDJq.js";import"./preload-helper-DhRmtqSx.js";import"./ledger-ui-98Yh45Bq.js";const{expect:r,fn:s}=__STORYBOOK_MODULE_TEST__,_={title:"Components/Navigation/RecordAction",component:o,args:{onPress:s()},argTypes:{onPress:{control:!1}}},e={play:async({args:t,canvas:a,userEvent:n})=>{await n.click(a.getByRole("button",{name:"거래 기록하기"})),await r(t.onPress).toHaveBeenCalledOnce()}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  play: async ({
+    args,
+    canvas,
+    userEvent
+  }) => {
+    await userEvent.click(canvas.getByRole('button', {
+      name: '거래 기록하기'
+    }));
+    await expect(args.onPress).toHaveBeenCalledOnce();
+  }
+}`,...e.parameters?.docs?.source}}};const v=["Default"];export{e as Default,v as __namedExportsOrder,_ as default};
